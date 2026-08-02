@@ -4,44 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
  </head>
  <body>
 
     <div class="container">
+
         <h1>Password Generator</h1>
-       <div class="display-container"></div>
-       <input readonly placeholder="Your password will appear here" class="display" data-password-display>
-       <button>
-            <span data-copyMsg></span>
-            <img src = "cppy-icon.svg" alt="copy" height="20px" width="20px">
+
+       <div class="display-container">
+       <input 
+            readonly
+            placeholder="Password" 
+            class="display" 
+            data-password-display
+            >
+       <button class="copy-btn" data-copy>
+            <span data-copy-Msg></span>
+
+            <img src = "copy.png" alt="copy" height="30px" width="30px">
        </button>
-       <div class="input-conatiner">
+       </div>
+       <div class="input-container">
 
         <!-- Password length Section -->
-           <div class="password-length-contianer"></div>
-           <p data-lengthNumber>0</p>
-       </div>
+           <div class="password-length-container">
+            <p>Password Length</p>
+            <p data-length-Number>0</p>
+           </div>
        <!-- Slider -->
-       <input type="range" min="1" max="20" class="slider" step="1" data-length-slider>
+       <input type="range" min="1" max="20" class="slider" step="1" data-length-slider >
        <!-- custome-Atrribute yad rakhna kaha use hota hai jab haam JS se koi Cheez Manupulate karna chahta hun toh ye deta hun class ya ide se bhi kar sakte hai etc  -->
 
        <!-- Check-Boxes -->
-        <div>
+        <div class="check">
             <input type="checkbox" id="uppercase">
             <label for="uppercase">Include Uppercase Letters</label>
         </div>
 
-        <div>
+        <div class="check">
             <input type = "checkbox" id = "lowercase">
             <label for="lowercase">Include lowercase Letters</label>
         </div>
-        <div>
+        <div class="check">
             <input type = "checkbox" id = "numbers">
             <label for="numbers">Include Numbers</label>
         </div>
-        <div>
+        <div class="check">
             <input type = "checkbox" id = "symbols">
             <label for="symbols">Include Symbols</label>
         </div>
@@ -49,13 +61,13 @@
         <!-- Strength-Section -->
          <div class="strength-container">
             <p>Strength</p>
-            <div class="strength-bar" data-indicator=""> O </div>
+            <div class="indicator" data-indicator=""></div>
         </div>
 
         <!-- genrate password button -->
         <button class="password-generate-btn">Generate Password</button>
     </div>
-
-
+</div>
+<script src="Script.js" defer></script>
  </body>
  </html>
